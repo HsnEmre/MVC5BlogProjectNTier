@@ -1,0 +1,55 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewBag.Title = "UpdateBlog";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form class="form-horizontal" method="post">
+    <div class="form-group">
+      
+        <div class="col-sm-10">
+            @Html.HiddenFor(x => x.BlogID, new { @class = "form-control" })
+        </div>
+    </div>    
+    <div class="form-group">
+        @Html.Label("Blog Başlığı", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Blog Kategori", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.val, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Resim Yolu", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Tarih", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.TextBoxFor(x => x.BlogDate, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Blog Yazar", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.DropDownListFor(x => x.AuthorID, (List<SelectListItem>)ViewBag.val2, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label("Blog İçerik", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-10">
+            @Html.TextAreaFor(x => x.BlogContent, 10, 50, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-info">Kaydet</button>
+        </div>
+    </div>
+</form>

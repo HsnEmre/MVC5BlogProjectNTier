@@ -41,7 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\AboutManager.cs" />
+    <Compile Include="Concrete\AuthorManager.cs" />
+    <Compile Include="Concrete\BlogManager.cs" />
+    <Compile Include="Concrete\CategoryManager.cs" />
+    <Compile Include="Concrete\CommentManager.cs" />
+    <Compile Include="Concrete\ContactManager.cs" />
+    <Compile Include="Concrete\SubscribeMailManager.cs" />
+    <Compile Include="Concrete\UserProfileManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{a3b50d65-43bb-4812-b502-d96cfe41a7ad}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{3bdde85c-4415-4130-abcb-452b0d3ad27b}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

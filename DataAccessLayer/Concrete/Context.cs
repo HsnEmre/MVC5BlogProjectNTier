@@ -17,6 +17,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Comments> Comments  { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<SubscribeMail> SubscribeMails { get; set;}
         
     }
 }

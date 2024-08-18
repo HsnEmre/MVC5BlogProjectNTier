@@ -19,6 +19,8 @@ namespace EntityLayer.Concrete
         public DateTime BlogDate { get; set; }
         public string BlogContent { get; set; }
 
+        public int BlogRating { get; set; }
+
         #region RelationCategory
         public int CategoryID { get; set; }
         public virtual Categories Categories { get; set; }
